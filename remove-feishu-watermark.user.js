@@ -1,19 +1,18 @@
 // ==UserScript==
-// @name              移除飞书网页水印 | Remove watermarks for Lark
-// @description       移除飞书网页水印
-// @name:zh-CN        移除飞书网页水印
-// @description:zh-CN 移除飞书网页水印
-// @name:en           Remove watermarks for Lark
-// @description:en    Remove watermarks for Lark.
+// @name              移除watermark-outer网页水印 | Remove watermarks for Lark
+// @description       移除watermark-outer网页水印
+// @name:zh-CN        移除watermark-outer网页水印
+// @description:zh-CN 移除watermark-outer网页水印
+// @name:en           Remove watermark-outer
+// @description:en    Remove watermark-outer.
 // @version           0.7.3
 // @license           The Unlicense
 // @author            lbb00
-// @homepage          https://github.com/lbb00/remove-feishu-watermark
-// @updateURL         https://raw.githubusercontent.com/lbb00/remove-feishu-watermark/main/remove-feishu-watermark.user.js
-// @downloadURL       https://raw.githubusercontent.com/lbb00/remove-feishu-watermark/main/remove-feishu-watermark.user.js
+// @homepage          https://github.com/impl1874/remove-watermark-outer
 // @match             https://*.feishu.cn/*
 // @match             https://*.larksuite.com/*
 // @match             https://*.larkoffice.com/*
+// @match             https://*.ahjkjt.com/*
 // @run-at            document-start
 // @grant             GM_addStyle
 // ==/UserScript==
@@ -35,7 +34,7 @@ if (typeof GM_addStyle === 'undefined') {
   }
 }
 
-const bgImageNone = '{background-image: none !important;}'
+const bgImageNone = '{background-image: none !important;color: rgba(0,0,0,0);}'
 function genStyle(selector) {
   return `${selector}${bgImageNone}`
 }
